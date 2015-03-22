@@ -24,6 +24,8 @@ function draw() {
 	currentMillis=millis();
 
 if(currentMillis - previousMillis >= interval){
+    loadJSON("https://api.thingspeak.com/channels/24240/feed.json?key=QYBTY2UU44K8K2DI",drawFeed);
+
 	previousMillis = currentMillis;
 }
   

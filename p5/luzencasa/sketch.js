@@ -1,7 +1,7 @@
   var counter=0;
   var currentMillis=0;
   var previousMillis=0;
-  var interval=1000;
+  var interval=4000;
 	var valor;
 
 

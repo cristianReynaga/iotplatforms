@@ -2,13 +2,11 @@
 	var currentMillis=0;
 	var previousMillis=0;
 	var interval=20000;
-	var valor;
-	var power;
-	var timestamp
+	var valor, power, timestamp;
+	
 
 function setup() {  
 	createCanvas(windowWidth, windowHeight);
-//loadJSON("http://api.thingspeak.com/channels/24240/feed/last?key=QYBTY2UU44K8K2DI", drawFeed);
 	loadJSON("https://thingspeak.com/channels/24240/feeds/last",drawFeed, 'json');
 	//Agrego request a less
 	//loadJSON("http://52.10.233.24/v1/circuits/9016/latest",drawFeed2,'json');
@@ -46,12 +44,14 @@ function drawFeed(feed) {
 //	console.log(field1 + " at " + timestamp); 
 	valor=field1;
 	timestamp=_timestamp
+	console.log(timestamp);
 }
 
 function apiLess(feed) {
 
 	//console.log(feed); 
 	var _power = feed.data[0].proc.power; 
+
 	//var timestamp = feed.created_at;
 	//console.log(field1 + " at " + timestamp); 
 	

@@ -33,6 +33,9 @@ if(currentMillis - previousMillis >= interval){
 
 	previousMillis = currentMillis;
 }
+	var jun = moment("2014-06-01").tz("America/Toronto").format('Z');
+	
+	console.log(jun)
 	
 }
 
@@ -44,9 +47,11 @@ function drawFeed(feed) {
 //	console.log(field1 + " at " + timestamp); 
 	valor=field1;
 	timestamp=_timestamp
-	console.log(timestamp);
+	
 }
 
+
+/*
 function apiLess(feed) {
 
 	//console.log(feed); 
@@ -58,3 +63,4 @@ function apiLess(feed) {
 	console.log(_power);
 	power=_power;
 }
+*/
